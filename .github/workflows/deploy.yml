@@ -1,3 +1,7 @@
+# NOTE: This is a copy of ajay/site-common/.github/workflows/deploy.yml
+# because public repos cannot call reusable workflows from private repos.
+# When updating, diff against site-common's version and keep in sync.
+
 name: Deploy to GitHub Pages
 
 on:
@@ -9,7 +13,35 @@ permissions:
   pages: write
   id-token: write
 
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
 jobs:
   deploy:
-    uses: ajay/site-common/.github/workflows/deploy.yml@main
-    secrets: inherit
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+      # Public repo cannot use token to clone private submodules via
+      # actions/checkout. Clone them manually with git instead.
+      - name: Clone private submodules
+        run: |
+          git config --global url."https://x-access-token:${{ secrets.READ_ONLY_PAT }}@github.com/".insteadOf "git@github.com:"
+          git submodule update --init --recursive
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Build (if target exists)
+        run: |
+          if make -n build 2>/dev/null; then
+            make build
+          fi
+      - uses: actions/configure-pages@v4
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: '.'
+      - id: deployment
+        uses: actions/deploy-pages@v4
