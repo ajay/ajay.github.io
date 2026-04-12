@@ -29,7 +29,9 @@ jobs:
       # actions/checkout. Clone them manually with git instead.
       - name: Clone private submodules
         run: |
-          git config --global url."https://x-access-token:${{ secrets.READ_ONLY_PAT }}@github.com/".insteadOf "https://github.com/"
+          TOKEN_URL="https://x-access-token:${{ secrets.READ_ONLY_PAT }}@github.com/"
+          git config --global url."${TOKEN_URL}".insteadOf "https://github.com/"
+          git config --global --add url."${TOKEN_URL}".insteadOf "git@github.com:"
           git submodule update --init --recursive
       - uses: actions/setup-python@v5
         with:
