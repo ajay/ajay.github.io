@@ -2,7 +2,7 @@
 # because public repos cannot call reusable workflows from private repos.
 # When updating, diff against site-common's version and keep in sync.
 
-name: Deploy to GitHub Pages
+name: deploy
 
 on:
   push:
