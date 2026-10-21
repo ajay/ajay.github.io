@@ -31,4 +31,5 @@ remote's latest `main`. CI goes red when they lag, and the fix is a `site-common
 
 - Monospace and all lowercase. Links are plain words, one per line, alphabetical within each section (the order
   in `links.json` is the order shown).
-- Subpage links are root-relative (`/travel/`); external links are absolute. Socials carry `rel="me"`.
+- Pages are labelled with their path (`/travel`). Subpage links are root-relative (`/travel/`); external links are
+  absolute. Socials carry `rel="me"`.

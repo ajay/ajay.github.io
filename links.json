@@ -4,11 +4,11 @@
       "title": "pages",
       "links": [
         {
-          "label": "genealogy",
+          "label": "/genealogy",
           "soon": true
         },
         {
-          "label": "travel",
+          "label": "/travel",
           "href": "/travel/"
         }
       ]
