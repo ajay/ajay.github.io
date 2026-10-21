@@ -1,0 +1,56 @@
+/* The shared look comes from site-common/theme.css; this is page layout only. */
+body {
+  min-height: 100vh;
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+}
+/* Centred below the header; starts at the top when taller than the screen. */
+main {
+  width: 100%;
+  max-width: 520px;
+  margin: auto;
+  padding: 48px 24px;
+}
+.intro {
+  font-size: 15px;
+  font-weight: 500;
+  margin-bottom: 40px;
+}
+section {
+  padding: 20px 0;
+  border-top: 1px solid var(--line);
+}
+section:last-child {
+  border-bottom: 1px solid var(--line);
+}
+h2 {
+  font-size: 11px;
+  font-weight: 400;
+  color: var(--text-dim);
+  margin-bottom: 12px;
+}
+ul {
+  list-style: none;
+}
+li {
+  padding: 4px 0;
+}
+.soon {
+  color: var(--text-dim);
+}
+.tag {
+  font-size: 11px;
+  color: var(--text-dim);
+  margin-left: 10px;
+}
+@media (max-width: 640px) {
+  main {
+    padding: 32px 16px;
+  }
+}
+@media (max-width: 359px) {
+  main {
+    padding: 32px 12px;
+  }
+}
