@@ -46,7 +46,8 @@ li {
 }
 .accounts {
   display: grid;
-  grid-template-columns: max-content 1fr;
+  /* 9ch fits "instagram", so every section's usernames line up. */
+  grid-template-columns: minmax(9ch, max-content) 1fr;
   column-gap: 20px;
 }
 .accounts li {
