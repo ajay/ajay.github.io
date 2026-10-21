@@ -2,7 +2,8 @@
 
 [![deploy](https://github.com/ajay/ajay.github.io/actions/workflows/deploy.yml/badge.svg)](https://github.com/ajay/ajay.github.io/actions/workflows/deploy.yml) [![make-ci](https://github.com/ajay/ajay.github.io/actions/workflows/make-ci.yml/badge.svg)](https://github.com/ajay/ajay.github.io/actions/workflows/make-ci.yml)
 
-The root of [ajay.engineer](https://ajay.engineer/): a minimal page of links to subpages, sites and socials.
+The root of [ajay.engineer](https://ajay.engineer/): a minimal page of links to subpages, sites, socials and payments.
+Edit `links.json` to change them.
 Subpages such as [ajay.engineer/travel](https://ajay.engineer/travel/) live in their own repos.
 
 ```sh

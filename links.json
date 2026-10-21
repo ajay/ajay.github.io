@@ -1,0 +1,80 @@
+{
+  "sections": [
+    {
+      "title": "pages",
+      "links": [
+        {
+          "label": "genealogy",
+          "soon": true
+        },
+        {
+          "label": "travel",
+          "href": "/travel/"
+        }
+      ]
+    },
+    {
+      "title": "sites",
+      "links": [
+        {
+          "label": "hangsanfamily.com",
+          "href": "https://hangsanfamily.com/"
+        },
+        {
+          "label": "saxenafamily.com",
+          "href": "https://saxenafamily.com/"
+        },
+        {
+          "label": "srivastavafamily.com",
+          "href": "https://srivastavafamily.com/"
+        }
+      ]
+    },
+    {
+      "title": "socials",
+      "rel": "me",
+      "links": [
+        {
+          "label": "facebook",
+          "href": "https://www.facebook.com/ajaysriv",
+          "user": "ajaysriv"
+        },
+        {
+          "label": "github",
+          "href": "https://github.com/ajay",
+          "user": "ajay"
+        },
+        {
+          "label": "instagram",
+          "href": "https://www.instagram.com/ajaysriv",
+          "user": "ajaysriv"
+        },
+        {
+          "label": "linkedin",
+          "href": "https://www.linkedin.com/in/ajaysriv/",
+          "user": "ajaysriv"
+        },
+        {
+          "label": "twitter",
+          "href": "https://x.com/ajay________",
+          "user": "ajay________"
+        }
+      ]
+    },
+    {
+      "title": "$",
+      "links": [
+        {
+          "label": "cashapp",
+          "href": "https://cash.app/$ajaysriv",
+          "user": "$ajaysriv"
+        },
+        {
+          "label": "venmo",
+          "href": "https://venmo.com/ajaysrivastava",
+          "user": "ajaysrivastava"
+        }
+      ]
+    }
+  ]
+}

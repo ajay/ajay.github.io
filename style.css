@@ -44,6 +44,22 @@ li {
   color: var(--text-dim);
   margin-left: 10px;
 }
+.accounts {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  column-gap: 20px;
+}
+.accounts li {
+  display: grid;
+  grid-template-columns: subgrid;
+  grid-column: span 2;
+}
+.accounts a {
+  justify-self: start;
+}
+.user {
+  color: var(--text-dim);
+}
 @media (max-width: 640px) {
   main {
     padding: 32px 16px;
